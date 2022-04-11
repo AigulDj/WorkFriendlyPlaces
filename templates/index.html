@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block head %}{{ super() }}{% endblock %}
+
+{% block content %}
+<div class="container-fluid" id="london">
+    <!--    Filters     -->
+    <div class="cafes-filters">
+        <h2 class="c-filter">Filters</h2>
+        <form method="POST" class="socket btn-filter" name="filter">
+            <button name="socket" value="socket" class="btn btn-filter" data-criteria="toilet" data-toggle="button"
+                    aria-pressed="false">
+                <i class="fas fa-plug"></i>
+                <br>
+                <span title="Restroom">Sockets</span>
+            </button>
+        </form>
+        <form method="POST" class="restroom btn-filter" name="filter">
+            <button name="toilet" value="toilet" class="btn btn-filter" data-criteria="restroom" data-toggle="button"
+                    aria-pressed="false">
+                <i class="fas fa-toilet"></i>
+                <br>
+                <span title="Restroom">Restroom</span>
+            </button>
+        </form>
+        <form method="POST" class="wifi btn-filter" name="filter">
+            <button name="wifi" value="wifival" class="btn btn-filter" data-criteria="toilet" data-toggle="button"
+                    aria-pressed="false">
+                <i class="fas fa-wifi"></i>
+                <br>
+                <span title="Restroom">Wi-Fi</span>
+            </button>
+        </form>
+        <form method="POST" class="calls btn-filter" name="filter">
+            <button name="calls" value="callsval" class="btn btn-filter" data-criteria="toilet" data-toggle="button"
+                    aria-pressed="false">
+                <i class="fas fa-phone"></i>
+                <br>
+                <span title="Restroom">Calls</span>
+            </button>
+        </form>
+        <div class="city-title">
+            <h2>London</h2>
+        </div>
+    </div>
+    <!--   Body Content   -->
+    <div class="row">
+        <!--   Cafes    -->
+        <div class="col-lg-5" id="cafes-list">
+            <div class="list">
+                {% for cafe in cafes %}
+                <div class="cafe-card">
+                    <div class="cafe-img">
+                        <img src="{{cafe.img_url}}">
+                    </div>
+                    <div class="cafe-body">
+                        <a href="{{cafe.map_url}}"><p><b>{{cafe.name}}</b></p></a>
+                        <p><i class="fas fa-map-marker-alt"></i> {{cafe.location}}</p>
+                        <p><i class="fas fa-mug-hot"></i> {{cafe.coffee_price}}</p>
+                        <p><i class="fas fa-chair"></i> {{cafe.seats}}</p>
+                        <p style="color: #fff;">
+                            {% if cafe.has_sockets %} <i class="fas fa-plug"></i>{% endif %}
+                            {% if cafe.has_toilet %} <i class="fas fa-toilet"></i>{% endif %}
+                            {% if cafe.has_wifi %} <i class="fas fa-wifi"></i>{% endif %}
+                            {% if cafe.can_take_calls %} <i class="fas fa-phone"></i>{% endif %}
+                        </p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <!--    Google Map    -->
+        <div class="col-lg-7" id="cafes-map">
+            <div class="mapouter">
+                <div class="gmap_canvas">
+                    <iframe width="100%" height="100%" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=London&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <a href="https://www.whatismyip-address.com"></a><br>
+                    <style>.mapouter{position:relative;text-align:right;height:100%;width:100%;}</style>
+                    <a href="https://www.embedgooglemap.net"></a>
+                    <style>.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,185 @@
+/*** BASE.HTML ***/
+body {
+    background-color: #dce4cf;
+    color: #265037;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #265037 !important;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    color: #fff;
+}
+.navbar {
+    justify-content: space-between;
+    padding-left: 1em;
+    background-color: #3e684e;
+}
+.navbar-toggler{
+    margin-right: .5rem
+}
+.nav-item, nav-link {
+    color: #fff;
+}
+.navbar-nav {
+    padding-right: 1em;
+    font-size: 22px;
+}
+.navbar-dark .navbar-brand {
+    font-size: 30px;
+}
+#header {
+    background: #fff;
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 15px 0;
+    box-shadow: 0px 2px 15px rgb(36 50 93 / 6%);
+}
+
+/* Footer */
+footer {
+    background-color: #265037;
+    text-align: center;
+    height: 3rem;
+}
+.foo {
+    margin: unset;
+    margin-top: 12px;
+    color: #fff;
+}
+
+/*** INDEX.HTML ***/
+#london.container-fluid {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 5em auto;
+}
+.city-title {
+    position: inherit;
+    width: inherit;
+    color: #265037;
+    margin-top: 4rem;
+    background-color: inherit;
+}
+/* FILTERS */
+.cafes-filters {
+    position: fixed;
+    top: 4rem;
+    padding: 1.5em 0;
+    z-index: 900;
+    width: 40%;
+    background-color: #dce4cf;
+    color: #FFF;
+    left: 1.5em;
+    display: inherit;
+}
+.c-filter {
+    margin-right: .5em;
+}
+.btn-filter {
+    color: #fff;
+    padding: 0 0.5em;
+    /*display: inline-flex;*/
+}
+.btn:hover {
+    color: #265037;
+}
+.row {
+    width: 100%;
+}
+/* Cafes */
+#cafes-list {
+    position: relative;
+    z-index: 1;
+}
+.list {
+    margin-top: 8em;
+}
+#cafes-list .cafe-card {
+    display: flex;
+    column-gap: 1em;
+    margin-top: 1em
+}
+.cafe-img {
+    width: 40%;
+}
+#london .cafe-img img {
+    object-fit: cover;
+    height: 7rem;
+    width: 100%;
+}
+.cafe-body {
+    width: 60%;
+}
+.cafe-body p {
+    margin-bottom: 1.5px;
+    font-size: 15px
+}
+/* Google Map */
+#cafes-map {
+    position: fixed;
+    right: 0;
+    height: 100%;
+    top: 3.5em;
+}
+/*** CAFE_FORM.HTML ***/
+.form-box {
+    max-width: 35rem;
+    margin: 5rem;
+    font-size: 20px;
+}
+.form-title {
+    font-size: 50px;
+ }
+.form-control {
+    border: 1px solid #067633;
+    background-color: transparent !important;
+}
+.form-control:focus {
+    border-color: aquamarine;
+    outline: 1;
+}
+.btn-default {
+    width: 50%;
+    margin: 5% 25%;
+    padding: 0.5em;
+    background-color: #265037;
+    color: #dce4cf;
+}
+@media (max-width: 960px) {
+    .cafes-filters {
+        width: 100%;
+        font-size: 11px;
+    }
+    #cafes-map {
+        display: none;
+    }
+    .c-filter {
+        margin-right: 0.5em;
+    }
+    .list {
+        margin-top: 5em;
+    }
+    .cafe-body p {
+        font-size: inherit;
+    }
+    .navbar-dark .navbar-brand {
+        font-size: 26px;
+    }
+    .form-title {
+        font-size: 35px;
+        margin-bottom: 1rem;
+    }
+    .form-box {
+        margin: 5rem 1rem 2rem 1rem;
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work-Friendly Places</title>
+
+    <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;0,800;1,200;1,300;1,400;1,600;1,700;1,800&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+          rel="stylesheet">
+
+    <!--CSS stylesheets-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+    <!--Font Awesome icons (free version)-->
+    <script src="https://kit.fontawesome.com/371a448126.js" crossorigin="anonymous"></script>
+    {% endblock %}
+</head>
+<body>
+{% block header %}
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <a class="navbar-brand" href="{{ url_for('home') }}">Work-Friendly Places</a>
+    <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('add_cafe') }}">Add Cafe</a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+<!-- Footer -->
+<footer class="footer fixed-bottom">
+    {% block footer %}
+    <div class="txt-body"><p class="foo">AyaDj. {{ year }}</p></div>
+    {% endblock %}
+</footer>
+{% block content %}
+{% endblock %}
+</body>
+</html>

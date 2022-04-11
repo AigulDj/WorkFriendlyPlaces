@@ -1,0 +1,21 @@
+{% include 'base.html' %}
+
+{% block header %}
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <a class="navbar-brand" href="{{ url_for('home') }}">Work-Friendly Places</a>
+    <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+<!--    Form     -->
+{% import 'bootstrap/wtf.html' as wtf %}
+<div class="form-box">
+    <h2 class="form-title">Suggest Places</h2>
+    <form class="form" action="{{ url_for('add_cafe') }}" method="post">
+        {{ wtf.quick_form(form, novalidate=True) }}
+    </form>
+</div>
+</html>
