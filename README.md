@@ -1,10 +1,15 @@
 # WorkFriendlyPlaces
-Website that lists cafes with wifi, power etc for remote working.
 
-Just a simple website where users can find a place to work, searching by certain criteria like availability of wifi, sockets etc. 
-In addition, users themselves can also add places to be stored in the database.
+WorkFriendlyPlaces is a simple website that enables remote workers to find cafes and other venues with wifi and power. Users can search for a location based on specific criteria, such as availability of wifi and sockets. Additionally, users can contribute to the database by adding new places to the list.
 
-Unfortunately, I couldn't find a free version of google map API to make the map more useful, thus it is just a useless map there, 
-but you can click on the place's name, which is a link to its Google map info.
+Although a map is displayed on the website, I was unable to integrate the Google Maps API due to the cost. However, users can still access Google Maps by clicking on the name of the place they are interested in.
 
+### Stack
+Python
+SQLAlchemy
+REST API
+Flask
+Ninja
+HTML5
+CSS3
 
