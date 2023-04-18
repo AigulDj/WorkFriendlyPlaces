@@ -1,6 +1,6 @@
 # WorkFriendlyPlaces
 
-![oops, GIF not available!](https://res.cloudinary.com/dskqecu6i/image/upload/v1681821976/wfp_k3jnbv.gif)
+![oops, GIF not available!](https://res.cloudinary.com/dskqecu6i/image/upload/v1681834646/wfp_x6pf2v.gif)
 
 WorkFriendlyPlaces is a simple website that enables remote workers to find cafes and other venues with wifi and power. Users can search for a location based on specific criteria, such as availability of wifi and sockets. Additionally, users can contribute to the database by adding new places to the list.
 
